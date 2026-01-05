@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VIXYN — Lucky Girl Season</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Brand Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+<header class="hero">
+  <h1>VIXYN</h1>
+  <p class="tagline">Lucky Girl Season</p>
+
+  <div class="hero-actions">
+    <button class="hero-btn" id="openSignup">
+      Join the Drop List
+    </button>
+
+    <a href="shop.html" class="hero-btn secondary-btn">Shop the Drop</a>
+<a href="lookbook.html" class="hero-btn secondary-btn">Look Book</a>
+
+<button class="scroll-arrow" aria-label="Scroll down">
+  ↓
+</button>
+
+  </div>
+</header>
+
+  <!-- SIGN-UP POPUP -->
+  <div class="signup-overlay" id="signupOverlay">
+    <div class="signup-modal">
+
+      <!-- CLOSE BUTTON -->
+      <button class="signup-close" aria-label="Close">&times;</button>
+
+      <h2>Stay in the VIXYN Loop</h2>
+      <p>Get drop dates, early access, and Lucky Girl Season updates.</p>
+
+      <!-- FORMSPREE FORM -->
+      <form
+        class="signup-form"
+        action="https://formspree.io/f/xanrvzde"
+        method="POST"
+      >
+
+        <!-- optional email subject -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New VIXYN Drop List Signup 💜"
+        />
+
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </label>
+
+        <label>
+          Phone (optional)
+          <input
+            type="tel"
+            name="phone"
+            placeholder="555-555-5555"
+          />
+        </label>
+
+        <button type="submit" class="signup-submit">
+          Join the Drop List
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const overlay = document.getElementById("signupOverlay");
+    const closeBtn = document.querySelector(".signup-close");
+    const openBtn = document.getElementById("openSignup");
+
+    // Open popup
+    openBtn.addEventListener("click", () => {
+      overlay.classList.remove("hidden");
+    });
+
+    // Close popup (X)
+    closeBtn.addEventListener("click", () => {
+      overlay.classList.add("hidden");
+    });
+
+    // Close when clicking outside modal
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add("hidden");
+      }
+    });
+
+    // Close on ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        overlay.classList.add("hidden");
+      }
+    });
+  </script>
+<!-- ===== FAQ SECTION ===== -->
+<section class="faq-stage" id="faq">
+  <h2 class="faq-title">FAQ</h2>
+  <p class="faq-subtitle">
+    Questions? Email us at
+    <a class="faq-email" href="mailto: vixynconnect@gmail.com">vixynconnect@gmail.com</a>
+  </p>
+
+  <div class="faq-wrap">
+
+    <details class="faq-item">
+      <summary>When does the Founders Sale drop?</summary>
+      <div class="faq-answer">
+        Founders Sale is <b>first come, first served</b>. Join the Drop List for the exact release time and updates.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can I buy right now?</summary>
+      <div class="faq-answer">
+        Not yet — items show <b>Coming Soon</b> until the drop opens.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What sizes will be available?</summary>
+      <div class="faq-answer">
+        This first drop includes sizes <b>Small, Medium, and Large</b>.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How much is shipping?</summary>
+      <div class="faq-answer">
+        Shipping is calculated at checkout based on your location. You’ll see the total before you pay.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How long does shipping take?</summary>
+      <div class="faq-answer">
+        Processing usually takes <b>2–5 business days</b> after your order is placed. Shipping time depends on your location.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Returns / exchanges?</summary>
+      <div class="faq-answer">
+        Because this is a limited Founders Sale, returns/exchanges depend on availability. If something arrives damaged or incorrect,
+        email us within <b>48 hours</b> and we’ll make it right.
+      </div>
+    </details>
+
+  </div>
+</section>
+
+</body>
+</html>
