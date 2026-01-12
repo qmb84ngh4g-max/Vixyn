@@ -19,7 +19,7 @@ body {
 
   background:
     linear-gradient(rgba(10, 4, 25, 0.7), rgba(10, 4, 25, 0.75)),
-    url("hero.jpeg");
+    url("hero.JPEG");
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -827,4 +827,5 @@ box-shadow:
     top: 62%;
   }
 }
+
 
