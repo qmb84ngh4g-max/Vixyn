@@ -631,8 +631,8 @@ box-shadow:
   color: rgba(255,255,255,0.7);
 }
 
-/* coming soon button */
 .shop-btn{
+  display: inline-block;
   width: 100%;
   padding: 0.85rem 1rem;
   border-radius: 999px;
@@ -640,8 +640,14 @@ box-shadow:
   background: linear-gradient(90deg, #ff7ad9, #c78bff);
   color: #0b0714;
   font-weight: 700;
-  opacity: 0.75;   /* looks disabled but still cute */
-  cursor: not-allowed;
+  text-align: center;
+  text-decoration: none;
+  opacity: 1;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.shop-btn:hover{
+  filter: brightness(1.05);
 }
 
 /* placeholder block (re-use your existing placeholder look) */
